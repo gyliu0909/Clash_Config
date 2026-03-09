@@ -772,6 +772,10 @@ rule-providers:
     format: yaml
 
 rules:
+  - PROCESS-PATH-REGEX,(?i)thunder,DIRECT
+  - PROCESS-PATH-REGEX,(?i)downloadservice,DIRECT
+  - DOMAIN-SUFFIX,sandai.net,DIRECT
+  - DOMAIN-SUFFIX,xunlei.com,DIRECT
   - RULE-SET,Scholar,🎓 科研工作
   - RULE-SET,ChatGPT,🧚 AI
   - RULE-SET,OpenAI,🧚 AI
