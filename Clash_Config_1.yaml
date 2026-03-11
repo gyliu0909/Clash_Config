@@ -772,7 +772,6 @@ rule-providers:
     format: yaml
 
 rules:
-  - DOMAIN-SUFFIX,collect.alipay.com,🚀 国外流量
   - PROCESS-PATH-REGEX,(?i)lenovo,DIRECT
   - PROCESS-PATH-REGEX,(?i)thunder,DIRECT
   - PROCESS-PATH-REGEX,(?i)downloadservice,DIRECT
