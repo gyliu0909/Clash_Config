@@ -4,7 +4,7 @@ on:
   push:
     paths:
       - 'base.yaml'
-      - 'provider_*.yaml' # 只有当你修改了这些源文件时才触发
+      - 'provider_*.yaml' # 只有当你修改了这些源文件时才会触发工作流
 
 jobs:
   build:
@@ -15,18 +15,35 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Merge YAML files
+      - name: Generate Config 1
         run: |
-          # 简单的拼接逻辑：把 providers 和 base 拼接成最终文件
-          cat provider_1.yaml base.yaml > Clash_Config_1.yaml
-          cat provider_2.yaml base.yaml > Clash_Config_2.yaml
-          cat provider_3.yaml base.yaml > Clash_Config_3.yaml
-          cat provider_mixed.yaml base.yaml > "Clash_Config_Mixed_1+3.yaml"
+          cat provider_1.yaml > Clash_Config_1.yaml
+          # 将 base.yaml 中的占位符替换为 airport1，并追加到文件末尾
+          sed 's/__AIRPORTS__/      - airport1/g' base.yaml >> Clash_Config_1.yaml
+
+      - name: Generate Config 2
+        run: |
+          cat provider_2.yaml > Clash_Config_2.yaml
+          sed 's/__AIRPORTS__/      - airport2/g' base.yaml >> Clash_Config_2.yaml
+
+      - name: Generate Config 3
+        run: |
+          cat provider_3.yaml > Clash_Config_3.yaml
+          sed 's/__AIRPORTS__/      - airport3/g' base.yaml >> Clash_Config_3.yaml
+
+      - name: Generate Config Mixed 1+3
+        run: |
+          cat provider_mixed.yaml > "Clash_Config_Mixed_1+3.yaml"
+          # 使用 \n 换行，同时写入 airport1 和 airport3，确保缩进一致
+          sed 's/__AIRPORTS__/      - airport1\n      - airport3/g' base.yaml >> "Clash_Config_Mixed_1+3.yaml"
 
       - name: Commit and Push changes
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
+          # 将新生成的 4 个配置文件添加到暂存区
           git add Clash_Config_*.yaml
-          git commit -m "Auto-generate merged Clash configs" || exit 0
+          # 提交更改，如果文件没有变化则跳过报错 (exit 0)
+          git commit -m "Auto-generate configs with placeholder replacement" || exit 0
+          # 推送到 GitHub 仓库
           git push
