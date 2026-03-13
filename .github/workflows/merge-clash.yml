@@ -1,1 +1,32 @@
+name: Auto Merge Clash Configs
 
+on:
+  push:
+    paths:
+      - 'base.yaml'
+      - 'provider_*.yaml' # 只有当你修改了这些源文件时才触发
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Merge YAML files
+        run: |
+          # 简单的拼接逻辑：把 providers 和 base 拼接成最终文件
+          cat provider_1.yaml base.yaml > Clash_Config_1.yaml
+          cat provider_2.yaml base.yaml > Clash_Config_2.yaml
+          cat provider_3.yaml base.yaml > Clash_Config_3.yaml
+          cat provider_mixed.yaml base.yaml > "Clash_Config_Mixed_1+3.yaml"
+
+      - name: Commit and Push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add Clash_Config_*.yaml
+          git commit -m "Auto-generate merged Clash configs" || exit 0
+          git push
