@@ -368,47 +368,47 @@ proxy-groups:
       - 🚀 手动选择1
       - 🚀 手动选择2
   - name: 🇭🇰 香港节点
-    type: fallback
-    url: https://i.ytimg.com/generate_204
-    interval: 300
+    type: url-test
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 150
+    timeout: 3000
     tolerance: 50
-    timeout: 2000
     use:
       - airport3
     filter: "(?i)港|hk|hongkong|hong kong"
   - name: 🇹🇼 台湾节点
-    type: fallback
-    url: https://i.ytimg.com/generate_204
-    interval: 300
+    type: url-test
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 150
+    timeout: 3000
     tolerance: 50
-    timeout: 2000
     use:
       - airport3
     filter: "(?i)台|tw|taiwan"
   - name: 🇸🇬 新加坡节点
-    type: fallback
-    url: https://i.ytimg.com/generate_204
-    interval: 300
+    type: url-test
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 150
+    timeout: 3000
     tolerance: 50
-    timeout: 2000
     use:
       - airport3
     filter: "(?i)新加坡|坡|狮城|sg|singapore"
   - name: 🇯🇵 日本节点
-    type: fallback
-    url: https://i.ytimg.com/generate_204
-    interval: 300
+    type: url-test
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 150
+    timeout: 3000
     tolerance: 50
-    timeout: 2000
     use:
       - airport3
     filter: "(?i)日|jp|japan"
   - name: 🇺🇸 美国节点
-    type: fallback
-    url: https://i.ytimg.com/generate_204
-    interval: 300
-    tolerance: 150
-    timeout: 2000
+    type: url-test
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 150
+    timeout: 3000
+    tolerance: 50
     use:
       - airport3
     filter: "(?i)美|us|unitedstates|united states|America"
