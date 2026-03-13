@@ -36,12 +36,12 @@ proxy-groups:
     type: select
     use:
 __AIRPORTS__
-    exclude-filter: "(?i)客户端|节点|流量|到期|剩余|重置|官网|群组|通知|公告|说明|地址|发布|频道|联系|客服|维护|订阅|更新|过期|账户|有效|签到|提示|指南|购买|套餐|推广|Emby|aff|Tip|Note|Info|Website|Contact|Notice|Group|Plan|Expire|Reset|Used|Left|Traffic|Order|Site|Register|Account|Join|Telegram|Bot|http"
+    exclude-filter: "(?i)客户端|节点|流量|到期|剩余|重置|官网|群组|通知|公告|说明|地址|发布|频道|联系|客服|维护|订阅|更新|过期|账户|有效|签到|提示|指南|购买|套餐|推广|失效|Emby|aff|Tip|Note|Info|Website|Contact|Notice|Group|Plan|Expire|Reset|Used|Left|Traffic|Order|Site|Register|Account|Join|Telegram|Bot|http"
   - name: 🚀 手动选择2
     type: select
     use:
 __AIRPORTS__
-    exclude-filter: "(?i)客户端|节点|流量|到期|剩余|重置|官网|群组|通知|公告|说明|地址|发布|频道|联系|客服|维护|订阅|更新|过期|账户|有效|签到|提示|指南|购买|套餐|推广|Emby|aff|Tip|Note|Info|Website|Contact|Notice|Group|Plan|Expire|Reset|Used|Left|Traffic|Order|Site|Register|Account|Join|Telegram|Bot|http"
+    exclude-filter: "(?i)客户端|节点|流量|到期|剩余|重置|官网|群组|通知|公告|说明|地址|发布|频道|联系|客服|维护|订阅|更新|过期|账户|有效|签到|提示|指南|购买|套餐|推广|失效|Emby|aff|Tip|Note|Info|Website|Contact|Notice|Group|Plan|Expire|Reset|Used|Left|Traffic|Order|Site|Register|Account|Join|Telegram|Bot|http"
   - name: 🐟 漏网之鱼
     type: select
     proxies:
@@ -63,7 +63,7 @@ __AIRPORTS__
     tolerance: 50
     use:
 __AIRPORTS__
-    exclude-filter: "(?i)客户端|节点|流量|到期|剩余|重置|官网|群组|通知|公告|说明|地址|发布|频道|联系|客服|维护|订阅|更新|过期|账户|有效|签到|提示|指南|购买|套餐|推广|Emby|aff|Tip|Note|Info|Website|Contact|Notice|Group|Plan|Expire|Reset|Used|Left|Traffic|Order|Site|Register|Account|Join|Telegram|Bot|http"
+    exclude-filter: "(?i)客户端|节点|流量|到期|剩余|重置|官网|群组|通知|公告|说明|地址|发布|频道|联系|客服|维护|订阅|更新|过期|账户|有效|签到|提示|指南|购买|套餐|推广|失效|Emby|aff|Tip|Note|Info|Website|Contact|Notice|Group|Plan|Expire|Reset|Used|Left|Traffic|Order|Site|Register|Account|Join|Telegram|Bot|http"
   - name: 🔯 故障转移
     type: fallback
     url: https://i.ytimg.com/generate_204
@@ -71,7 +71,7 @@ __AIRPORTS__
     tolerance: 50
     use:
 __AIRPORTS__
-    exclude-filter: "(?i)客户端|节点|流量|到期|剩余|重置|官网|群组|通知|公告|说明|地址|发布|频道|联系|客服|维护|订阅|更新|过期|账户|有效|签到|提示|指南|购买|套餐|推广|Emby|aff|Tip|Note|Info|Website|Contact|Notice|Group|Plan|Expire|Reset|Used|Left|Traffic|Order|Site|Register|Account|Join|Telegram|Bot|http"
+    exclude-filter: "(?i)客户端|节点|流量|到期|剩余|重置|官网|群组|通知|公告|说明|地址|发布|频道|联系|客服|维护|订阅|更新|过期|账户|有效|签到|提示|指南|购买|套餐|推广|失效|Emby|aff|Tip|Note|Info|Website|Contact|Notice|Group|Plan|Expire|Reset|Used|Left|Traffic|Order|Site|Register|Account|Join|Telegram|Bot|http"
   - name: 🔮 负载均衡
     type: load-balance
     strategy: consistent-hashing
@@ -80,7 +80,7 @@ __AIRPORTS__
     tolerance: 50
     use:
 __AIRPORTS__
-    exclude-filter: "(?i)客户端|节点|流量|到期|剩余|重置|官网|群组|通知|公告|说明|地址|发布|频道|联系|客服|维护|订阅|更新|过期|账户|有效|签到|提示|指南|购买|套餐|推广|Emby|aff|Tip|Note|Info|Website|Contact|Notice|Group|Plan|Expire|Reset|Used|Left|Traffic|Order|Site|Register|Account|Join|Telegram|Bot|http"
+    exclude-filter: "(?i)客户端|节点|流量|到期|剩余|重置|官网|群组|通知|公告|说明|地址|发布|频道|联系|客服|维护|订阅|更新|过期|账户|有效|签到|提示|指南|购买|套餐|推广|失效|Emby|aff|Tip|Note|Info|Website|Contact|Notice|Group|Plan|Expire|Reset|Used|Left|Traffic|Order|Site|Register|Account|Join|Telegram|Bot|http"
   - name: 🎓 科研工作
     type: select
     proxies:
