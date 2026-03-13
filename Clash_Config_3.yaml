@@ -392,7 +392,6 @@ proxy-groups:
     use:
       - airport3
     filter: "(?i)美|us|unitedstates|united states|America"
-
 port: 7890
 socks-port: 7891
 allow-lan: true
