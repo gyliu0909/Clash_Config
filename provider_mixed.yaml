@@ -1,1 +1,23 @@
+proxy-providers:
+  airport1:
+    type: http
+    url: https://sub01.fkknet.cn/api/v1/client/subscribe?token=fdac89efeaaa5679e26213fc80241537
+    interval: 86400
+    health-check:
+      enable: true
+      interval: 600
+      url:  https://www.gstatic.com/generate_204
+    override:
+      additional-prefix: "[超实惠]"
+  airport3:
+    type: http
+    url: https://b3.342242.icu/api/v1/client/subscribe?token=0fd79c27d16ebfce0231fd7b98283f7b
+    interval: 86400
+    health-check:
+      enable: true
+      interval: 600
+      url:  https://www.gstatic.com/generate_204
+    override:
+      additional-prefix: "[飞鸟云]"
 
+    
