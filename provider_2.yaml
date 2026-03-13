@@ -1,1 +1,9 @@
-
+proxy-providers:
+  airport2:
+    type: http
+    url: https://drfytjmjhggnrgergergergerg6555.saojc.xyz/api/v1/client/subscribe?token=1f2cf2df65a691d38b10a1f67dcefe21
+    interval: 86400
+    health-check:
+      enable: true
+      interval: 600
+      url:  https://www.gstatic.com/generate_204
