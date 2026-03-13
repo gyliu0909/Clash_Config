@@ -1,1 +1,9 @@
-
+proxy-providers:
+  airport1:
+    type: http
+    url: https://sub01.fkknet.cn/api/v1/client/subscribe?token=fdac89efeaaa5679e26213fc80241537
+    interval: 86400
+    health-check:
+      enable: true
+      interval: 600
+      url:  https://www.gstatic.com/generate_204
