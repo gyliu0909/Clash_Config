@@ -1,7 +1,7 @@
 proxy-providers:
   airport2:
     type: http
-    url: https://drfytjmjhggnrgergergergerg6555.saojc.xyz/api/v1/client/subscribe?token=1f2cf2df65a691d38b10a1f67dcefe21
+    url: https://usapi.saojc.xyz/assets/user/avatar/9bc4a5ee0c39.png?ref=1f2cf2df65a691d38b10a1f67dcefe21
     interval: 86400
     health-check:
       enable: true
