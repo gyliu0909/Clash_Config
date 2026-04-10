@@ -1,7 +1,7 @@
 proxy-providers:
   airport2:
     type: http
-    url: https://usapi.saojc.xyz/assets/user/avatar/9bc4a5ee0c39.png?ref=1f2cf2df65a691d38b10a1f67dcefe21
+    url: https://userapi.saojc.xyz/assets/user/avatar/dc3741bdac51.png?ref=1f2cf2df65a691d38b10a1f67dcefe21&flag=clash
     interval: 86400
     health-check:
       enable: true
