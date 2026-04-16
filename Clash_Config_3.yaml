@@ -1,7 +1,7 @@
 proxy-providers:
   airport3:
     type: http
-    url: https://b3.342242.icu/api/v1/client/subscribe?token=0fd79c27d16ebfce0231fd7b98283f7b
+    url: https://a.342242.icu/api/v1/client/subscribe?token=0fd79c27d16ebfce0231fd7b98283f7b
     interval: 86400
     health-check:
       enable: true
