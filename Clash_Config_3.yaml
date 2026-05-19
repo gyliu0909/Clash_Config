@@ -414,6 +414,13 @@ proxy-groups:
     filter: "(?i)美|us|unitedstates|united states|America"
 
 rule-providers:
+  Adobe:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/ignaciocastro/a-dove-is-dumb/refs/heads/main/clash.yaml"
+    interval: 86400
+    format: yaml
+    
   Scholar:
     type: http
     behavior: classical
@@ -778,6 +785,7 @@ rules:
   - PROCESS-PATH-REGEX,(?i)downloadservice,DIRECT
   - DOMAIN-SUFFIX,sandai.net,DIRECT
   - DOMAIN-SUFFIX,xunlei.com,DIRECT
+  - RULE-SET,Adobe,🛑 广告拦截
   - RULE-SET,Scholar,🎓 科研工作
   - RULE-SET,ChatGPT,🧚 AI
   - RULE-SET,OpenAI,🧚 AI
