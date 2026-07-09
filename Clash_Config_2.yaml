@@ -1,7 +1,7 @@
 proxy-providers:
   airport2:
     type: http
-    url: https://llg.do7nb.com/s/1f2cf2df65a691d38b10a1f67dcefe21#%E6%B5%81%E9%87%8F%E5%85%89-llG%20New
+    url: https://llgapi.tannel.asia/s/1f2cf2df65a691d38b10a1f67dcefe21#%E6%B5%81%E9%87%8F%E5%85%89-llG%20New
     interval: 86400
     health-check:
       enable: true
